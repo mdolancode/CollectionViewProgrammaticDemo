@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C57B56282CF0FC2F007487B3 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B56272CF0FC2F007487B3 /* CustomCollectionViewCell.swift */; };
+		C57B562C2CF148ED007487B3 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B562B2CF148ED007487B3 /* CustomHeaderView.swift */; };
 		C5AB52712CF03EEE00AA2D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB52702CF03EEE00AA2D94 /* AppDelegate.swift */; };
 		C5AB52732CF03EEE00AA2D94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB52722CF03EEE00AA2D94 /* SceneDelegate.swift */; };
 		C5AB52752CF03EEE00AA2D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB52742CF03EEE00AA2D94 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		C57B56272CF0FC2F007487B3 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		C57B562B2CF148ED007487B3 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		C5AB526D2CF03EEE00AA2D94 /* CollectionViewProgrammaticDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewProgrammaticDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AB52702CF03EEE00AA2D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5AB52722CF03EEE00AA2D94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				C5AB52722CF03EEE00AA2D94 /* SceneDelegate.swift */,
 				C5AB52742CF03EEE00AA2D94 /* ViewController.swift */,
 				C57B56272CF0FC2F007487B3 /* CustomCollectionViewCell.swift */,
+				C57B562B2CF148ED007487B3 /* CustomHeaderView.swift */,
 				C5AB52792CF03EEF00AA2D94 /* Assets.xcassets */,
 				C5AB527B2CF03EEF00AA2D94 /* LaunchScreen.storyboard */,
 				C5AB527E2CF03EEF00AA2D94 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57B562C2CF148ED007487B3 /* CustomHeaderView.swift in Sources */,
 				C5AB52752CF03EEE00AA2D94 /* ViewController.swift in Sources */,
 				C5AB52712CF03EEE00AA2D94 /* AppDelegate.swift in Sources */,
 				C5AB52732CF03EEE00AA2D94 /* SceneDelegate.swift in Sources */,
