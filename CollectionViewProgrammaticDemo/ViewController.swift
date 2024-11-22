@@ -13,8 +13,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 10
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 10
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
@@ -25,6 +25,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Add collectionView to the view hierarchy
         view.addSubview(collectionView)
+        
+        collectionView.isPagingEnabled = true
         
         // Add collectionView constraints
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,18 +59,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
-        // Assign different sizes dynamically
-//        if indexPath.row % 3 == 0 {
-//            // Larger cell
-//            return CGSize(width: width / 2, height: width / 2)
-//        } else {
-//            // Smaller cell
-//            return CGSize(width: width / 3, height: width / 3)
-//        }
-
-        return indexPath.row % 2 == 0
-        ? CGSize(width: width / 2, height: width / 3) // Wider cell
-        : CGSize(width: width / 3, height: width / 2) // Taller cell
+        let height = collectionView.frame.height
+        let width = height * 0.8 // Adjust width based on height
+        return CGSize(width: width, height: height)
     }
 }
