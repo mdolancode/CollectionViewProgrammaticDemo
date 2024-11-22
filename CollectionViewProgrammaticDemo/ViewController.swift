@@ -59,12 +59,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width
         // Assign different sizes dynamically
-        if indexPath.row % 3 == 0 {
-            // Larger cell
-            return CGSize(width: width / 2, height: width / 2)
-        } else {
-            // Smaller cell
-            return CGSize(width: width / 3, height: width / 3)
-        }
+//        if indexPath.row % 3 == 0 {
+//            // Larger cell
+//            return CGSize(width: width / 2, height: width / 2)
+//        } else {
+//            // Smaller cell
+//            return CGSize(width: width / 3, height: width / 3)
+//        }
+
+        return indexPath.row % 2 == 0
+        ? CGSize(width: width / 2, height: width / 3) // Wider cell
+        : CGSize(width: width / 3, height: width / 2) // Taller cell
     }
 }
