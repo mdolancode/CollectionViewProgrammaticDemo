@@ -39,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.dataSource = self
         
         // Register a cell class
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "CustomCell")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,15 +47,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .systemBlue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCollectionViewCell
         
-        // Add a label to display data
-        let label = UILabel(frame: cell.contentView.frame)
-        label.text = "\(data[indexPath.row])"
-        label.textAlignment = .center
-        label.textColor = .white
-        cell.contentView.addSubview(label)
+        cell.imageView.image = UIImage(named: "sun-hung-DkBT63dM684-unsplash.jpg")
+        cell.titleLabel.text = "Item \(indexPath.row + 1)"
+        cell.titleLabel.textColor = .systemPink
         
         return cell
     }
